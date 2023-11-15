@@ -1,0 +1,151 @@
+<!-- Key Form Elements, input type, textarea, select-drop down manu, button -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <header>
+      <h1>Your Demo Form</h1>
+    </header>
+    <main>
+      <!-- action= destination URL -->
+      <!-- method, 2 types of sending form data= GET, add form data in URL or POST, attach extra form data -->
+      <!-- {novalidate} ignore the broswer validation-->
+      <form action="/" method="GET">
+        <section>
+          <h2>Your personal details</h2>
+          <!-- label, explanation of input data, paired {for} & {id} -->
+          <label for="username">Your name</label>
+          <!-- create input element and define type -->
+          <!-- {required} is mendatory-->
+          <!-- {placeholder} is example, no replacement of label-->
+          <input type="text" name="user-name" id="username" required placeholder="Mark Hong"/>
+          <label for="useremail">Your email address</label>
+          <!-- fill the input bar with default value -->
+          <input
+            type="email"
+            name="user-email"
+            id="useremail"
+            value="@gmail.com"
+            required
+          />
+          <label for="userpassword">Your password</label>
+          <input type="password" name="user-password" id="userpassword" required minlength="7"/>
+        </section>
+
+        <section>
+          <h2>More details</h2>
+          <label for="usermessage">Your message</label>
+          <!--textarea has closing, unique, no functional reason-->
+          <!-- rows sets default rows, no fixing -->
+          <textarea id="usermessage" name="user-message" rows="8"></textarea>
+
+          <label for="userage">Your age</label>
+          <!-- set stepping scale -->
+          <input type="number" step="1" name="user-age" id="userage" required min="18" max="100"/>
+
+          <label for="userbirthday">Your birthday</label>
+          <!-- the date format is yyyy-mm-dd -->
+          <input type="date" name="user-birthday" id="userbirthday" required min="1950-01-01" max="2023-12-12"/>
+        </section>
+
+        <label for="fav-color">Your favorite color?</label>
+        <select id="fav-color" name="fav-color">
+          <option value="blue">Blue</option>
+          <option value="red">Red</option>
+          <option value="white">White</option>
+        </select>
+
+        <section>
+          <h2>How should we verify your account?</h2>
+          <ul id="verification">
+            <li>
+              <!-- same {name} element enforce chooing only 1 option -->
+              <!-- not like other input, selected radio button value will be sent to the server -->
+              <input
+                type="radio"
+                name="verify"
+                id="verify-text-message"
+                value="text-message"
+                required
+              />
+              <label for="verify-text-message">Via text message (SMS)</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="verify"
+                id="verify-phone"
+                value="phone"
+                required
+              />
+              <label for="verify-phone">Via a phone call</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="verify"
+                id="verify-email"
+                value="email"
+                required
+              />
+              <label for="verify-email">Via an email</label>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How should we contact you?</h2>
+          <ul id="contact-method">
+            <li>
+              <!-- checkbox can tick multi -->
+              <input
+                type="checkbox"
+                name="contact"
+                id="contact-email"
+                value="email"
+              />
+              <label for="contact-email">Contact me via email</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                name="contact"
+                id="contact-phone"
+                value="phone"
+              />
+              <label for="contact-phone">Contact me via phone</label>
+            </li>
+          </ul>
+        </section>
+
+        <!-- horizon line -->
+        <hr />
+
+        <section id="terms">
+          <span>
+            <input
+              type="checkbox"
+              name="terms"
+              id="agree-terms"
+              value="terms"
+            />
+            <label for="agree-terms">Agree to terms?</label>
+          </span>
+          <button type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>

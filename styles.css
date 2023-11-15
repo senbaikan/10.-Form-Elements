@@ -1,0 +1,129 @@
+body {
+  background-color: rgb(0, 0, 0);
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  color: white;
+  text-align: center;
+}
+form {
+  width: 30rem;
+  margin: 3rem auto;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+textarea {
+  /* resizing the textbox */
+  resize: none;
+  /* resize: vertical;
+  resize: horizontal; */
+}
+
+label {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+
+  /* herit from parent style */
+  font: inherit;
+
+  border: 1px solid rgb(184, 184, 184);
+  padding: 0.25rem;
+  color: rgb(64, 62, 62);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: rgb(219, 190, 253);
+  color: rgb(32, 5, 63);
+  border-color: rgb(32, 5, 63);
+}
+
+#verification {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  list-style: none;
+}
+
+#verification li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: rgb(205, 169, 238);
+  border-radius: 3px;
+}
+
+ul {
+  list-style: none;
+}
+
+#verification input {
+  margin: 0.5rem auto;
+}
+
+#terms {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+#terms span {
+  display: flex;
+}
+
+#terms input,
+#contact-method input {
+  width: 1rem;
+}
+
+#contact-method {
+  margin: 0;
+  padding: 0;
+}
+
+#contact-method li {
+  display: flex;
+}
+
+#terms label,
+#contact-method label {
+  margin-left: 0.5rem;
+}
+
+#form-control-inline {
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  /* font: normal 1rem "Roboto", san-serif; */
+  font: inherit;
+  background-color: rgb(32, 5, 63);
+  color: white;
+  border: 1px solid rgb(32, 5, 63);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(84, 33, 143);
+  border-color: rgb(84, 33, 143);
+}
